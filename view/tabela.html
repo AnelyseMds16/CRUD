@@ -1,0 +1,32 @@
+<table border="1">
+    <thead>
+        <tr>
+
+            <th>Titulo</th>
+            <th>Autor</th>
+            <th>Resenha</th>
+            <th>Editar</th>
+            <th>Remover</th>
+        </tr>
+    </thead>
+    <tbody>
+        {linha}
+        <tr>
+
+            <td>{titulo}</td>
+            <td>{autor}</td>
+            <td>{resenha}</td>
+            <td>
+                <button type="button"
+                    onclick="window.location.href='?acao=Tabela&metodo=editar&id={id}';">Editar</button>
+            </td>
+            <td>
+                <button type="button"
+                    onclick="if(confirm('Tem certeza que deseja excluir o livro?'))window.location.href='?acao=Tabela&metodo=remover&id={id}';">
+                    Remover
+                </button>
+            </td>
+        </tr>
+        {/linha}
+    </tbody>
+</table>
