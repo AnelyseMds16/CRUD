@@ -20,7 +20,7 @@ class Aplicacao
   public static function run()
   {
     $layout = new Template("layout.html");
-    $conteudo["msg"] = "Livro";
+    $conteudo["msg"] = "Corrida";
     if (!isset($_GET["acao"])) {
       $class = "layout";
     } else {
