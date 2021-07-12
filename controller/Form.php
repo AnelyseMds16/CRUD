@@ -14,17 +14,17 @@ class Form
 
   public function salvar()
   {
-    if (isset($_POST["titulo"]) && isset($_POST["autor"]) && isset($_POST["resenha"])) {
+    if (isset($_POST["equipe"]) && isset($_POST["piloto"]) && isset($_POST["posicao"])) {
       try {
         $conexao = Transaction::get();
-        $titulo = $conexao->quote($_POST["titulo"]);
-        $autor = $conexao->quote($_POST["autor"]);
-        $resenha = $conexao->quote($_POST["resenha"]);
+        $equipe = $conexao->quote($_POST["equipe"]);
+        $piloto = $conexao->quote($_POST["piloto"]);
+        $posicao = $conexao->quote($_POST["posicao"]);
         $crud = new Crud();
         $retorno = $crud->insert(
-          "livro",
-          "titulo,autor,resenha",
-          "{$titulo},{$autor},{$resenha}"
+          "corrida",
+          "equipe, piloto, posicao",
+          "{$equipe},{$piloto},{$posicao}"
         );
       } catch (Exception $e) {
         $retorno["msg"] = "Ocorreu um erro! " . $e->getMessage();

@@ -10,7 +10,7 @@ class Tabela
     try {
       Transaction::get();
       $crud = new Crud();
-      $retorno = $crud->select("livro");
+      $retorno = $crud->select("corrida");
       if (!$retorno["erro"]) {
         $tabela = new Template("view/tabela.html");
         $tabela->set("linha", $retorno["msg"]);
@@ -31,7 +31,7 @@ class Tabela
         $id = $conexao->quote($_GET["id"]);
         $crud = new Crud();
         $retorno = $crud->delete(
-          "livro",
+          "corrida",
           "id={$id}"
         );
       } catch (Exception $e) {
@@ -53,7 +53,7 @@ class Tabela
         $id = $conexao->quote($_GET["id"]);
         $crud = new Crud();
         $retorno = $crud->select(
-          "livro",
+          "corrida",
           "*",
           "id={$id}"
         );
