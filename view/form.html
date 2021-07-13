@@ -1,13 +1,13 @@
 <form method="POST" action="?acao=Form&metodo=salvar">
-
+    <input type="hidden" name="id" value="{id}">
     <label>Equipe:</label>
-    <input type="text" name="equipe" required /><br />
+    <input type="text" name="equipe" required value="{equipe}"/><br />
 
     <label>Piloto:</label>
-    <input type="text" name="piloto" required /><br />
+    <input type="text" name="piloto" required value="{piloto}" /><br />
 
     <label>Posição:</label>
-    <textarea type="int" name="posicao" required></textarea><br />
+    <input type="number" name="posicao" required value="{posicao}"/><br />
 
     <button type="submit">Salvar</button>
 </form>

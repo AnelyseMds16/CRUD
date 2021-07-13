@@ -5,9 +5,9 @@
 
         public static function open(){
             $type = "mysql";
-            $user = "";
+            $user = "root";
             $pass = "";
-            $name = " crud ";
+            $name = "crud";
             $host = "localhost"; // Endereço do servidor do BD
             $port = "3306";
 

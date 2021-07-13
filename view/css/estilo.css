@@ -5,11 +5,11 @@
     box-sizing: border-box;
   }
   body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: monospace;
     font-size: 14px;
   }
   nav {
-    background-color: rebeccapurple;
+    background-color: yellow;
   }
   nav ul {
     display: flex;
@@ -26,7 +26,7 @@
   }
   nav ul li a {
     text-decoration: none;
-    color: white;
+    color: black;
   }
   nav ul li a:hover {
     font-size: 1.1rem;
@@ -36,4 +36,5 @@
     max-width: 800px;
     width: 100%;
     margin: 0 auto;
+    background-color: yellow;
   }
